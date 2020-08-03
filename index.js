@@ -18,7 +18,7 @@ $(document).ready(function () {
     $(".second").waypoint(function (direction) {
         if (direction === "down") {
 
-            $(".second").addClass("animated fadeInLeft");
+            $(".second").addClass("animated zoomIn");
         }
         // else if (direction === 'up') {
         //     off = '60%';
@@ -26,7 +26,7 @@ $(document).ready(function () {
         //     $(".second").addClass("animated fadeInRight");
         // }
         else {
-            $(".second").removeClass("animated fadeInLeft");
+            $(".second").removeClass("animated zoomIn");
         }
     }, {
         offset: '80%'
