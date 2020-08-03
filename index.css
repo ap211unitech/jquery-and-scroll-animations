@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Slideshow */
+
+.image img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    min-width: 400px;
+    position: absolute;
+}
+
+/* progress bar */
+
+.progress {
+    margin-top: 900px;
+    max-width: 600px;
+    border-radius: 10px;
+    height: 20px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bar1 {
+    max-width: 600px;
+    height: 16px;
+    /*This is actually above (height-(border-width*2)) */
+    border-radius: 10px;
+    background-color: green;
+}
+
+@keyframes move {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+/* Scroll animation */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.first, .second, .third {
+    opacity: 0;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    z-index: 99999;
+    margin-top: 700px;
+}
+
+.first.animated, .second.animated, .third.animated {
+    opacity: 1;
+    animation-duration: 0.5s;
+}
+
+@media screen and (max-width:733px) {
+    .container {
+        flex-direction: column;
+    }
+    .first, .second, .third {
+        margin: 10px;
+    }
+}
