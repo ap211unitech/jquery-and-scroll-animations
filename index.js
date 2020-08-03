@@ -72,10 +72,10 @@ function showSlides() {
 
 let navlink = document.getElementById("navlink");
 navlink.addEventListener("click", () => {
-    gsap.fromTo(".nav-content", { y: -200, opacity: 0 }, { y: -19, opacity: 1, duration: 0.5 })
+    gsap.fromTo(".nav-content", { x: -200, y: -19, opacity: 0 }, { x: 0, y: -19, opacity: 1, duration: 0.5 })
 })
 
 let closenav = document.getElementById("close-nav");
-closenav.addEventListener("click",()=>{
-    gsap.fromTo(".nav-content", { y: 0, opacity: 1 }, { y: -200, opacity: 0, duration: 0.5 })
+closenav.addEventListener("click", () => {
+    gsap.fromTo(".nav-content", { y: -19, x: 0, opacity: 1 }, { y: -19, x: -200, opacity: 0, duration: 0.5 })
 })
